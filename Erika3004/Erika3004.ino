@@ -94,7 +94,7 @@ void loop(){
       WiFiClientSecure client_tcp;
       client_tcp.setInsecure();   //run version 1.0.5 or above
     
-      String request = "{\"model\":\"text-davinci-003\",\"prompt\":\"" + Eingabe + "\",\"temperature\":0.7,\"max_tokens\":" + String(max_tokens) + ",\"frequency_penalty\":0,\"presence_penalty\":0.6,\"top_p\":1.0}";
+      String request = "{\"model\":\"gpt-3.5-turbo-instruct\",\"prompt\":\"" + Eingabe + "\",\"temperature\":0.7,\"max_tokens\":" + String(max_tokens) + ",\"frequency_penalty\":0,\"presence_penalty\":0.6,\"top_p\":1.0}";
       Serial.print("request: "); Serial.println(request);
     
       if (client_tcp.connect("api.openai.com", 443)) {
