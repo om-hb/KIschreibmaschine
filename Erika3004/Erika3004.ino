@@ -2,7 +2,7 @@
 #include "ddr2ascii.h"
 #include "ascii2ddr.h"
 
-#define PC_BAUD 9600
+#define PC_BAUD 115200
 
 //#define DTD_PIN 14
 #define RTS_PIN 23
@@ -38,7 +38,7 @@ int Sonderzeichen;
 void setup()
 {
   delay(1000);
-  Serial.begin(115200);
+  Serial.begin(PC_BAUD);
   delay(100);
   Serial.println("geht los ...");
   pinMode(RTS_PIN, INPUT);
